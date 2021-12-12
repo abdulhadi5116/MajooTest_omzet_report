@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Fortify\Fortify;
 use App\Models\User;
+use JWTAuth;
+use Tymon\JWTAuth\Exceptions\JWTException;
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -70,10 +72,16 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::authenticateUsing(function (Request $request) {
             $username=$request->user_name;
             $password=$this->hash($request->password);
+            $credentials = [
+                'user_name' => $username,
+                'password'  => $password
+            ];
     
             $user =User::where([['user_name', $username], ['password', $password]])->first();
         
             if ($user) {
+                $user->token = JWTAuth::fromUser($user);
+                $user->save();
                 return $user;
             }
         });

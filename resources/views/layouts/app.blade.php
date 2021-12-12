@@ -40,19 +40,19 @@
                     <ul class="navbar-nav mr-auto">
                         @auth
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('merchants.index') }}">Merchant</a>
+                            <a class="nav-link" href="{{ route('merchants.index', ['token' => auth()->user()->token]) }}">Merchant</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('transactions.index') }}">Transaksi</a>
+                            <a class="nav-link" href="{{ route('transactions.index', ['token' => auth()->user()->token]) }}">Transaksi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('transactions.revenue', ['isOutlet' => 1]) }}">Omzet Harian</a>
+                            <a class="nav-link" href="{{ route('transactions.revenue', ['isOutlet' => 1, 'token' => auth()->user()->token]) }}">Omzet Harian</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('transactions.revenue.monthly', ['startdate' => '2021-11-01', 'enddate' => '2021-11-30']) }}">Omzet Merchant Bulan November</a>
+                            <a class="nav-link" href="{{ route('transactions.revenue.monthly', ['startdate' => '2021-11-01', 'enddate' => '2021-11-30', 'token' => auth()->user()->token]) }}">Omzet Merchant Bulan November</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('transactions.revenue.monthly', ['startdate' => '2021-11-01', 'enddate' => '2021-11-30', 'isOutlet' => 1]) }}">Omzet Bulan November</a>
+                            <a class="nav-link" href="{{ route('transactions.revenue.monthly', ['startdate' => '2021-11-01', 'enddate' => '2021-11-30', 'isOutlet' => 1, 'token' => auth()->user()->token]) }}">Omzet Bulan November</a>
                         </li>
                         @endauth
                     </ul>

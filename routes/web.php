@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth','jwt.verify'])->group(function () {
     Route::get('merchants', [App\Http\Controllers\MerchantController::class, 'index'])->name('merchants.index');
     Route::get('transactions', [App\Http\Controllers\TransactionController::class, 'index'])->name('transactions.index');
     Route::get('transactions/revenue', [App\Http\Controllers\TransactionController::class, 'revenue'])->name('transactions.revenue');
