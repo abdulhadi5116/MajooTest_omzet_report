@@ -15,7 +15,7 @@ class CreateOutletsTable extends Migration
     {
         Schema::create('outlets', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('merchant_id')->constrained();
+            $table->foreignId('merchant_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->string('outlet_name', 40);
             $table->timestamp('created_at')->useCurrent();
             $table->bigInteger('created_by');
