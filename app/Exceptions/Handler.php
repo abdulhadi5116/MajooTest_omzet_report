@@ -4,6 +4,7 @@ namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
+use Illuminate\Validation\ValidationException;
 
 class Handler extends ExceptionHandler
 {
@@ -28,14 +29,52 @@ class Handler extends ExceptionHandler
     ];
 
     /**
-     * Register the exception handling callbacks for the application.
+     * Report or log an exception.
      *
+     * @param  \Throwable  $exception
      * @return void
+     *
+     * @throws \Throwable
      */
-    public function register()
+    public function report(Throwable $exception)
     {
-        $this->reportable(function (Throwable $e) {
-            //
-        });
+        parent::report($exception);
+    }
+
+    /**
+     * Render an exception into an HTTP response.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Throwable  $exception
+     * @return \Symfony\Component\HttpFoundation\Response
+     *
+     * @throws \Throwable
+     */
+    public function render($request, Throwable $exception)
+    {
+        /**
+         * prepare response object from exception
+         */
+        $response = $this->convertExceptionToResponse($exception);
+        $response->exception = $exception;
+
+        $message = $exception instanceof ValidationException 
+            ? $exception->validator->getMessageBag() 
+            : $exception->getMessage();
+        /**
+         * prepare response data
+         */
+        $this->responseContent = [
+            'code' => $response->getStatusCode() ?? 500,
+            'success' => false,
+            'message' => $message ?? 'Terjadi kesalahan. Silahkan ulangi kembali setelah beberapa saat lagi.',
+        ];
+
+        return response()->json(
+            $this->responseContent,
+            $response->getStatusCode() ?? 500
+        );
+
+        // return parent::render($request, $exception);
     }
 }

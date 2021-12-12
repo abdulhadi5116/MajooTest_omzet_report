@@ -53,7 +53,7 @@ class Kernel extends HttpKernel
         'throttle' => ['throttle:60,1'], //No idea why, but this works to prevent request limiter on login
 
         'api' => [
-            // \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
+            \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
             'throttle:60,1',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],

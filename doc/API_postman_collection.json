@@ -1,0 +1,608 @@
+{
+	"info": {
+		"_postman_id": "99dd4d34-2785-405a-bfa6-2c11af460600",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{app-url}}/api/login",
+							"host": [
+								"{{app-url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "admin1",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "admin1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{app-url}}/api/login",
+									"host": [
+										"{{app-url}}"
+									],
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 Dec 2021 20:13:55 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 Dec 2021 20:13:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.24"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"token\": \"5|D9avtnTkNTd6O0OTdocg6fWTxraMFVBYL5E4vP1K\",\n        \"jwt_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzOTM0MDAzNSwiZXhwIjoxNjM5MzQzNjM1LCJuYmYiOjE2MzkzNDAwMzUsImp0aSI6IkRHUWVVcWtjQ1JxQmM0UkwiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.PPbjFRrdeUX__ERGTthHHdv8tqF2W4x8ZzgpJea4dRQ\",\n        \"name\": \"Admin 1\"\n    },\n    \"message\": \"User logged-in!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Admin 3",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "admin3",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin3",
+									"type": "text"
+								},
+								{
+									"key": "confirm_password",
+									"value": "admin3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{app-url}}/api/register",
+							"host": [
+								"{{app-url}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Admin 3",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "admin3",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "admin3",
+											"type": "text"
+										},
+										{
+											"key": "confirm_password",
+											"value": "admin3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{app-url}}/api/register",
+									"host": [
+										"{{app-url}}"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 Dec 2021 20:06:21 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 Dec 2021 20:06:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.24"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"token\": \"2|WvN2g1pqSzXD5gmuZR4KdX4tC1rIaKSMtDAF2efO\",\n        \"name\": \"Admin 3\"\n    },\n    \"message\": \"User successfully registered!\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzOTM0MDAzNSwiZXhwIjoxNjM5MzQzNjM1LCJuYmYiOjE2MzkzNDAwMzUsImp0aSI6IkRHUWVVcWtjQ1JxQmM0UkwiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.PPbjFRrdeUX__ERGTthHHdv8tqF2W4x8ZzgpJea4dRQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{app-url}}/api/transactions/index",
+							"host": [
+								"{{app-url}}"
+							],
+							"path": [
+								"api",
+								"transactions",
+								"index"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Index",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzOTM0MDAzNSwiZXhwIjoxNjM5MzQzNjM1LCJuYmYiOjE2MzkzNDAwMzUsImp0aSI6IkRHUWVVcWtjQ1JxQmM0UkwiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.PPbjFRrdeUX__ERGTthHHdv8tqF2W4x8ZzgpJea4dRQ",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{app-url}}/api/transactions/index",
+									"host": [
+										"{{app-url}}"
+									],
+									"path": [
+										"api",
+										"transactions",
+										"index"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 Dec 2021 20:38:29 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 Dec 2021 20:38:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.24"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"merchant_id\": 1,\n            \"outlet_id\": 1,\n            \"bill_total\": 2000,\n            \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n            \"created_by\": 1,\n            \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n            \"updated_by\": 1,\n            \"merchant\": {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"merchant_name\": \"Merchant 1\",\n                \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"created_by\": 1,\n                \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"updated_by\": 1\n            },\n            \"outlet\": {\n                \"id\": 1,\n                \"merchant_id\": 1,\n                \"outlet_name\": \"Outlet 1\",\n                \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"created_by\": 1,\n                \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"updated_by\": 1\n            }\n        },\n        {\n            \"id\": 2,\n            \"merchant_id\": 1,\n            \"outlet_id\": 1,\n            \"bill_total\": 2500,\n            \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n            \"created_by\": 1,\n            \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n            \"updated_by\": 1,\n            \"merchant\": {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"merchant_name\": \"Merchant 1\",\n                \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"created_by\": 1,\n                \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"updated_by\": 1\n            },\n            \"outlet\": {\n                \"id\": 1,\n                \"merchant_id\": 1,\n                \"outlet_name\": \"Outlet 1\",\n                \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"created_by\": 1,\n                \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"updated_by\": 1\n            }\n        },\n        {\n            \"id\": 3,\n            \"merchant_id\": 1,\n            \"outlet_id\": 1,\n            \"bill_total\": 4000,\n            \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n            \"created_by\": 1,\n            \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n            \"updated_by\": 1,\n            \"merchant\": {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"merchant_name\": \"Merchant 1\",\n                \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"created_by\": 1,\n                \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"updated_by\": 1\n            },\n            \"outlet\": {\n                \"id\": 1,\n                \"merchant_id\": 1,\n                \"outlet_name\": \"Outlet 1\",\n                \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"created_by\": 1,\n                \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"updated_by\": 1\n            }\n        },\n        {\n            \"id\": 4,\n            \"merchant_id\": 1,\n            \"outlet_id\": 1,\n            \"bill_total\": 1000,\n            \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n            \"created_by\": 1,\n            \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n            \"updated_by\": 1,\n            \"merchant\": {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"merchant_name\": \"Merchant 1\",\n                \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"created_by\": 1,\n                \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"updated_by\": 1\n            },\n            \"outlet\": {\n                \"id\": 1,\n                \"merchant_id\": 1,\n                \"outlet_name\": \"Outlet 1\",\n                \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"created_by\": 1,\n                \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"updated_by\": 1\n            }\n        },\n        {\n            \"id\": 5,\n            \"merchant_id\": 1,\n            \"outlet_id\": 1,\n            \"bill_total\": 7000,\n            \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n            \"created_by\": 1,\n            \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n            \"updated_by\": 1,\n            \"merchant\": {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"merchant_name\": \"Merchant 1\",\n                \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"created_by\": 1,\n                \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"updated_by\": 1\n            },\n            \"outlet\": {\n                \"id\": 1,\n                \"merchant_id\": 1,\n                \"outlet_name\": \"Outlet 1\",\n                \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"created_by\": 1,\n                \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"updated_by\": 1\n            }\n        },\n        {\n            \"id\": 6,\n            \"merchant_id\": 1,\n            \"outlet_id\": 3,\n            \"bill_total\": 2000,\n            \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n            \"created_by\": 1,\n            \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n            \"updated_by\": 1,\n            \"merchant\": {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"merchant_name\": \"Merchant 1\",\n                \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"created_by\": 1,\n                \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"updated_by\": 1\n            },\n            \"outlet\": {\n                \"id\": 3,\n                \"merchant_id\": 1,\n                \"outlet_name\": \"Outlet 2\",\n                \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"created_by\": 1,\n                \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"updated_by\": 1\n            }\n        },\n        {\n            \"id\": 7,\n            \"merchant_id\": 1,\n            \"outlet_id\": 3,\n            \"bill_total\": 2500,\n            \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n            \"created_by\": 1,\n            \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n            \"updated_by\": 1,\n            \"merchant\": {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"merchant_name\": \"Merchant 1\",\n                \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"created_by\": 1,\n                \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"updated_by\": 1\n            },\n            \"outlet\": {\n                \"id\": 3,\n                \"merchant_id\": 1,\n                \"outlet_name\": \"Outlet 2\",\n                \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"created_by\": 1,\n                \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"updated_by\": 1\n            }\n        },\n        {\n            \"id\": 8,\n            \"merchant_id\": 1,\n            \"outlet_id\": 3,\n            \"bill_total\": 4000,\n            \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n            \"created_by\": 1,\n            \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n            \"updated_by\": 1,\n            \"merchant\": {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"merchant_name\": \"Merchant 1\",\n                \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"created_by\": 1,\n                \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"updated_by\": 1\n            },\n            \"outlet\": {\n                \"id\": 3,\n                \"merchant_id\": 1,\n                \"outlet_name\": \"Outlet 2\",\n                \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"created_by\": 1,\n                \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"updated_by\": 1\n            }\n        },\n        {\n            \"id\": 9,\n            \"merchant_id\": 1,\n            \"outlet_id\": 3,\n            \"bill_total\": 1000,\n            \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n            \"created_by\": 1,\n            \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n            \"updated_by\": 1,\n            \"merchant\": {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"merchant_name\": \"Merchant 1\",\n                \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"created_by\": 1,\n                \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"updated_by\": 1\n            },\n            \"outlet\": {\n                \"id\": 3,\n                \"merchant_id\": 1,\n                \"outlet_name\": \"Outlet 2\",\n                \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"created_by\": 1,\n                \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"updated_by\": 1\n            }\n        },\n        {\n            \"id\": 10,\n            \"merchant_id\": 1,\n            \"outlet_id\": 3,\n            \"bill_total\": 7000,\n            \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n            \"created_by\": 1,\n            \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n            \"updated_by\": 1,\n            \"merchant\": {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"merchant_name\": \"Merchant 1\",\n                \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"created_by\": 1,\n                \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"updated_by\": 1\n            },\n            \"outlet\": {\n                \"id\": 3,\n                \"merchant_id\": 1,\n                \"outlet_name\": \"Outlet 2\",\n                \"created_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"created_by\": 1,\n                \"updated_at\": \"2021-12-13T01:46:10.000000Z\",\n                \"updated_by\": 1\n            }\n        }\n    ],\n    \"first_page_url\": \"http://localhost:8000/api/transactions/index?page=1\",\n    \"from\": 1,\n    \"last_page\": 1,\n    \"last_page_url\": \"http://localhost:8000/api/transactions/index?page=1\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:8000/api/transactions/index?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": null,\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": null,\n    \"path\": \"http://localhost:8000/api/transactions/index\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": 10,\n    \"total\": 10\n}"
+						}
+					]
+				},
+				{
+					"name": "Omzet November (Merchant)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzOTM0MDAzNSwiZXhwIjoxNjM5MzQzNjM1LCJuYmYiOjE2MzkzNDAwMzUsImp0aSI6IkRHUWVVcWtjQ1JxQmM0UkwiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.PPbjFRrdeUX__ERGTthHHdv8tqF2W4x8ZzgpJea4dRQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{app-url}}/api/transactions/revenue/monthly?startdate=2021-11-01&enddate=2021-12-30",
+							"host": [
+								"{{app-url}}"
+							],
+							"path": [
+								"api",
+								"transactions",
+								"revenue",
+								"monthly"
+							],
+							"query": [
+								{
+									"key": "startdate",
+									"value": "2021-11-01"
+								},
+								{
+									"key": "enddate",
+									"value": "2021-12-30"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Omzet November (Merchant)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzOTM0MDAzNSwiZXhwIjoxNjM5MzQzNjM1LCJuYmYiOjE2MzkzNDAwMzUsImp0aSI6IkRHUWVVcWtjQ1JxQmM0UkwiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.PPbjFRrdeUX__ERGTthHHdv8tqF2W4x8ZzgpJea4dRQ",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{app-url}}/api/transactions/revenue/monthly?startdate=2021-11-01&enddate=2021-12-30",
+									"host": [
+										"{{app-url}}"
+									],
+									"path": [
+										"api",
+										"transactions",
+										"revenue",
+										"monthly"
+									],
+									"query": [
+										{
+											"key": "startdate",
+											"value": "2021-11-01"
+										},
+										{
+											"key": "enddate",
+											"value": "2021-12-30"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 Dec 2021 20:45:45 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 Dec 2021 20:45:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.24"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"created_date\": \"2021-11-01\",\n            \"revenue\": 0\n        },\n        {\n            \"created_date\": \"2021-11-02\",\n            \"revenue\": 0\n        },\n        {\n            \"created_date\": \"2021-11-03\",\n            \"revenue\": 0\n        },\n        {\n            \"created_date\": \"2021-11-04\",\n            \"revenue\": 0\n        },\n        {\n            \"created_date\": \"2021-11-05\",\n            \"revenue\": 0\n        }\n    ],\n    \"first_page_url\": \"?page=1\",\n    \"from\": 1,\n    \"last_page\": 12,\n    \"last_page_url\": \"?page=12\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": \"?page=2\",\n            \"label\": \"2\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=3\",\n            \"label\": \"3\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=4\",\n            \"label\": \"4\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=5\",\n            \"label\": \"5\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=6\",\n            \"label\": \"6\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=7\",\n            \"label\": \"7\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=8\",\n            \"label\": \"8\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=9\",\n            \"label\": \"9\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=10\",\n            \"label\": \"10\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=11\",\n            \"label\": \"11\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=12\",\n            \"label\": \"12\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=2\",\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": \"?page=2\",\n    \"path\": \"\",\n    \"per_page\": 5,\n    \"prev_page_url\": null,\n    \"to\": 5,\n    \"total\": 60\n}"
+						}
+					]
+				},
+				{
+					"name": "Omzet November (Merchant Outlet)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzOTM0MDAzNSwiZXhwIjoxNjM5MzQzNjM1LCJuYmYiOjE2MzkzNDAwMzUsImp0aSI6IkRHUWVVcWtjQ1JxQmM0UkwiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.PPbjFRrdeUX__ERGTthHHdv8tqF2W4x8ZzgpJea4dRQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{app-url}}/api/transactions/revenue/monthly?startdate=2021-11-01&enddate=2021-12-30&isOutlet=True",
+							"host": [
+								"{{app-url}}"
+							],
+							"path": [
+								"api",
+								"transactions",
+								"revenue",
+								"monthly"
+							],
+							"query": [
+								{
+									"key": "startdate",
+									"value": "2021-11-01"
+								},
+								{
+									"key": "enddate",
+									"value": "2021-12-30"
+								},
+								{
+									"key": "isOutlet",
+									"value": "True"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Omzet November (Merchant Outlet)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzOTM0MDAzNSwiZXhwIjoxNjM5MzQzNjM1LCJuYmYiOjE2MzkzNDAwMzUsImp0aSI6IkRHUWVVcWtjQ1JxQmM0UkwiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.PPbjFRrdeUX__ERGTthHHdv8tqF2W4x8ZzgpJea4dRQ",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{app-url}}/api/transactions/revenue/monthly?startdate=2021-11-01&enddate=2021-12-30&isOutlet=True",
+									"host": [
+										"{{app-url}}"
+									],
+									"path": [
+										"api",
+										"transactions",
+										"revenue",
+										"monthly"
+									],
+									"query": [
+										{
+											"key": "startdate",
+											"value": "2021-11-01"
+										},
+										{
+											"key": "enddate",
+											"value": "2021-12-30"
+										},
+										{
+											"key": "isOutlet",
+											"value": "True"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 Dec 2021 20:46:06 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 Dec 2021 20:46:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.24"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"created_date\": \"2021-11-01\",\n            \"revenue\": 0\n        },\n        {\n            \"created_date\": \"2021-11-02\",\n            \"revenue\": 0\n        },\n        {\n            \"created_date\": \"2021-11-03\",\n            \"revenue\": 0\n        },\n        {\n            \"created_date\": \"2021-11-04\",\n            \"revenue\": 0\n        },\n        {\n            \"created_date\": \"2021-11-05\",\n            \"revenue\": 0\n        }\n    ],\n    \"first_page_url\": \"?page=1\",\n    \"from\": 1,\n    \"last_page\": 12,\n    \"last_page_url\": \"?page=12\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": \"?page=2\",\n            \"label\": \"2\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=3\",\n            \"label\": \"3\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=4\",\n            \"label\": \"4\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=5\",\n            \"label\": \"5\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=6\",\n            \"label\": \"6\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=7\",\n            \"label\": \"7\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=8\",\n            \"label\": \"8\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=9\",\n            \"label\": \"9\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=10\",\n            \"label\": \"10\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=11\",\n            \"label\": \"11\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=12\",\n            \"label\": \"12\",\n            \"active\": false\n        },\n        {\n            \"url\": \"?page=2\",\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": \"?page=2\",\n    \"path\": \"\",\n    \"per_page\": 5,\n    \"prev_page_url\": null,\n    \"to\": 5,\n    \"total\": 60\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
