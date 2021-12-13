@@ -50,31 +50,31 @@ class Handler extends ExceptionHandler
      *
      * @throws \Throwable
      */
-    public function render($request, Throwable $exception)
-    {
-        /**
-         * prepare response object from exception
-         */
-        $response = $this->convertExceptionToResponse($exception);
-        $response->exception = $exception;
+    // public function render($request, Throwable $exception)
+    // {
+    //     /**
+    //      * prepare response object from exception
+    //      */
+    //     $response = $this->convertExceptionToResponse($exception);
+    //     $response->exception = $exception;
 
-        $message = $exception instanceof ValidationException 
-            ? $exception->validator->getMessageBag() 
-            : $exception->getMessage();
-        /**
-         * prepare response data
-         */
-        $this->responseContent = [
-            'code' => $response->getStatusCode() ?? 500,
-            'success' => false,
-            'message' => $message ?? 'Terjadi kesalahan. Silahkan ulangi kembali setelah beberapa saat lagi.',
-        ];
+    //     $message = $exception instanceof ValidationException 
+    //         ? $exception->validator->getMessageBag() 
+    //         : $exception->getMessage();
+    //     /**
+    //      * prepare response data
+    //      */
+    //     $this->responseContent = [
+    //         'code' => $response->getStatusCode() ?? 500,
+    //         'success' => false,
+    //         'message' => $message ?? 'Terjadi kesalahan. Silahkan ulangi kembali setelah beberapa saat lagi.',
+    //     ];
 
-        return response()->json(
-            $this->responseContent,
-            $response->getStatusCode() ?? 500
-        );
+    //     return response()->json(
+    //         $this->responseContent,
+    //         $response->getStatusCode() ?? 500
+    //     );
 
-        // return parent::render($request, $exception);
-    }
+    //     // return parent::render($request, $exception);
+    // }
 }
